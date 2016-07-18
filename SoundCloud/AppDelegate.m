@@ -37,6 +37,15 @@ static NSString *JSKeyTemplate = @"e=new Event('keydown');e.keyCode=%d;document.
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     [[NSUserDefaults standardUserDefaults] setObject:self.webView.URL.absoluteString forKey:MainWindowURLKey];
 }
+- (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag
+{
+    if (flag) {
+        return NO;
+    } else {
+        [self.window makeKeyAndOrderFront:self];
+        return YES;
+    }
+}
 
 - (IBAction)play:(id)sender {
     NSLog(@"play");
