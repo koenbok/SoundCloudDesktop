@@ -4,5 +4,6 @@
 build:
 	xcodebuild
 
-release: build
+release:
 	python scripts/release.py
+	open release
