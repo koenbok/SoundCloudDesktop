@@ -12,8 +12,7 @@ This is a super simple desktop wrapper for SoundCloud. It's nice to have it runn
 
 #### Notes
 
-If iTunes keeps launching when you press the play button paste this in a terminal: `launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist`.
-
-It is somewhat based on [soundcleod](https://github.com/salomvary/soundcleod) but for some reason it stopped playing after a minute or so, and it was faster to rebuild than debug.
-
-SoundCloud, don't sue me I love you. And please make a nice desktop app. A web app is fine.
+- Facebook logins don't work, sorry. You can easily add a password and use that to login under your profile in your normal browser.
+- If iTunes keeps launching when you press the play button paste this in a terminal: `launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist`.
+- It is somewhat based on [soundcleod](https://github.com/salomvary/soundcleod) but for some reason it stopped playing after a minute or so, and it was faster to rebuild than debug.
+- SoundCloud, don't sue me I love you. And please make a nice desktop app. A web app is fine.
