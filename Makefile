@@ -2,7 +2,8 @@
 .PHONY: build release
 
 build:
-	xcodebuild
+	xcodebuild clean
+	xcodebuild -configuration Release
 
 release:
 	python scripts/release.py
