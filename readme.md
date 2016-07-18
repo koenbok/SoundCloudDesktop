@@ -1,6 +1,8 @@
 ![SoundCloud](https://cl.ly/2t2K250o153r/Image%202016-07-18%20at%209.19.51%20PM.png)
 
 
+You can [download the latest version here](https://github.com/koenbok/SoundCloudDesktop/raw/master/release/SoundCloud.zip).
+
 ### SoundCloud Desktop
 
 This is a super simple desktop wrapper for SoundCloud. It's nice to have it running in a separate app so you have it around and don't accidentaly close it. 
