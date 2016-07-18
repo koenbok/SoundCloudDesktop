@@ -15,3 +15,5 @@ This is a super simple desktop wrapper for SoundCloud. It's nice to have it runn
 If iTunes keeps launching when you press the play button paste this in a terminal: `launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist`.
 
 It is somewhat based on [soundcleod](https://github.com/salomvary/soundcleod) but for some reason it stopped playing after a minute or so, and it was faster to rebuild than debug.
+
+SoundCloud, don't sue me I love you. And please make a nice desktop app. A web app is fine.
