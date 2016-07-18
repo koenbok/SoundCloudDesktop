@@ -11,16 +11,49 @@
 @interface AppDelegate ()
 
 @property (weak) IBOutlet NSWindow *window;
+@property WKWebView *webView;
 @end
+
+static NSString *MainWindowURLKey = @"MainWindowURLKey";
+static NSString *JSKeyTemplate = @"e=new Event('keydown');e.keyCode=%d;document.dispatchEvent(e);e=new Event('keyup');e.keyCode=32;document.dispatchEvent(e)";
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+    
+    [[NSUserDefaults standardUserDefaults] registerDefaults:@{MainWindowURLKey:@"https://www.soundcloud.com"}];
+    
+    WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
+    
+    self.webView = [[WKWebView alloc] initWithFrame:self.window.contentView.bounds configuration:config];
+    
+    self.webView.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
+    [self.window.contentView addSubview:self.webView];
+    
+    NSString *url = [[NSUserDefaults standardUserDefaults] objectForKey:MainWindowURLKey];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
-    // Insert code here to tear down your application
+    [[NSUserDefaults standardUserDefaults] setObject:self.webView.URL.absoluteString forKey:MainWindowURLKey];
+}
+
+- (IBAction)play:(id)sender {
+    NSLog(@"play");
+    [self trigger:32];
+}
+- (IBAction)forward:(id)sender {
+    NSLog(@"forward");
+    [self trigger:74];
+}
+- (IBAction)backward:(id)sender {
+    NSLog(@"backward");
+    [self trigger:75];
+}
+
+- (void)trigger:(NSInteger)keyCode {
+    NSString *js = [NSString stringWithFormat:JSKeyTemplate, (NSInteger)keyCode];
+    [self.webView evaluateJavaScript:js completionHandler:nil];
 }
 
 @end

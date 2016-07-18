@@ -7,9 +7,13 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <WebKit/WebKit.h>
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
+- (IBAction)play:(id)sender;
+- (IBAction)forward:(id)sender;
+- (IBAction)backward:(id)sender;
 
 @end
 

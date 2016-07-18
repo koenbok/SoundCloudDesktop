@@ -13,6 +13,8 @@
 		5D8BA6CF1D3D566F00D2B48B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D8BA6CD1D3D566F00D2B48B /* MainMenu.xib */; };
 		5D8BA6DA1D3D566F00D2B48B /* SoundCloudTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8BA6D91D3D566F00D2B48B /* SoundCloudTests.m */; };
 		5D8BA6E51D3D566F00D2B48B /* SoundCloudUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8BA6E41D3D566F00D2B48B /* SoundCloudUITests.m */; };
+		5D8BA6F31D3D56D300D2B48B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8BA6F21D3D56D300D2B48B /* WebKit.framework */; };
+		5D8BA6F61D3D5C0C00D2B48B /* SCApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8BA6F51D3D5C0C00D2B48B /* SCApplication.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,9 @@
 		5D8BA6E01D3D566F00D2B48B /* SoundCloudUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundCloudUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D8BA6E41D3D566F00D2B48B /* SoundCloudUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoundCloudUITests.m; sourceTree = "<group>"; };
 		5D8BA6E61D3D566F00D2B48B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D8BA6F21D3D56D300D2B48B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		5D8BA6F41D3D5C0B00D2B48B /* SCApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCApplication.h; sourceTree = "<group>"; };
+		5D8BA6F51D3D5C0C00D2B48B /* SCApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCApplication.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D8BA6F31D3D56D300D2B48B /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +82,7 @@
 		5D8BA6B91D3D566F00D2B48B = {
 			isa = PBXGroup;
 			children = (
+				5D8BA6F21D3D56D300D2B48B /* WebKit.framework */,
 				5D8BA6C41D3D566F00D2B48B /* SoundCloud */,
 				5D8BA6D81D3D566F00D2B48B /* SoundCloudTests */,
 				5D8BA6E31D3D566F00D2B48B /* SoundCloudUITests */,
@@ -102,6 +109,8 @@
 				5D8BA6CD1D3D566F00D2B48B /* MainMenu.xib */,
 				5D8BA6D01D3D566F00D2B48B /* Info.plist */,
 				5D8BA6C81D3D566F00D2B48B /* Supporting Files */,
+				5D8BA6F41D3D5C0B00D2B48B /* SCApplication.h */,
+				5D8BA6F51D3D5C0C00D2B48B /* SCApplication.m */,
 			);
 			path = SoundCloud;
 			sourceTree = "<group>";
@@ -261,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D8BA6F61D3D5C0C00D2B48B /* SCApplication.m in Sources */,
 				5D8BA6CA1D3D566F00D2B48B /* main.m in Sources */,
 				5D8BA6C71D3D566F00D2B48B /* AppDelegate.m in Sources */,
 			);
