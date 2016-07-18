@@ -407,7 +407,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SoundCloud/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.motif.SoundCloud;
+				PRODUCT_BUNDLE_IDENTIFIER = com.koenbok.SoundCloud;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -419,7 +419,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SoundCloud/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.motif.SoundCloud;
+				PRODUCT_BUNDLE_IDENTIFIER = com.koenbok.SoundCloud;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
