@@ -14,6 +14,7 @@
 - (IBAction)play:(id)sender;
 - (IBAction)forward:(id)sender;
 - (IBAction)backward:(id)sender;
+- (IBAction)goTo:(id)sender;
 
 @end
 

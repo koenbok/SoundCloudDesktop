@@ -21,7 +21,7 @@ static NSString *JSKeyTemplate = @"e=new Event('keydown');e.keyCode=%d;document.
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     
-    [[NSUserDefaults standardUserDefaults] registerDefaults:@{MainWindowURLKey:@"https://www.soundcloud.com"}];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:@{MainWindowURLKey:@"https://www.mixcloud.com"}];
     
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
     
@@ -63,6 +63,25 @@ static NSString *JSKeyTemplate = @"e=new Event('keydown');e.keyCode=%d;document.
 - (void)trigger:(NSInteger)keyCode {
     NSString *js = [NSString stringWithFormat:JSKeyTemplate, (NSInteger)keyCode];
     [self.webView evaluateJavaScript:js completionHandler:nil];
+}
+
+- (IBAction)goTo:(NSMenuItem*)sender {
+    
+    NSString *url;
+    
+    switch (sender.tag) {
+        case 0:
+            url = @"https://soundcloud.com/";
+            break;
+        case 1:
+            url = @"https://mixcloud.com/";
+            break;
+            
+        default:
+            return;
+    }
+    
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
 }
 
 @end
